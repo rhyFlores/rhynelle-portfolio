@@ -1,4 +1,3 @@
-/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -44,7 +43,19 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
+}
+
+.logo {
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 3vw, 2rem);
 }
 
 /* Navigation */
@@ -109,20 +120,24 @@ body {
     
     .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 64px;
         left: 0;
         right: 0;
         background: rgba(15, 23, 42, 0.95);
         backdrop-filter: blur(10px);
         flex-direction: column;
-        padding: 2rem;
-        transform: translateX(-100%);
+        padding: 1.25rem 1rem;
+        transform: translateY(-12%);
+        opacity: 0;
+        pointer-events: none;
         transition: var(--transition);
         border-bottom: 1px solid var(--color-border);
     }
     
     .nav-menu.active {
-        transform: translateX(0);
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
     }
 }
 
@@ -226,7 +241,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 10rem;
+    padding-top: 8rem;
 }
 
 .hero-grid {
@@ -307,8 +322,8 @@ body {
 
 .hero-image-wrapper {
     position: relative;
-    width: 450px;
-    height: 450px;
+    width: min(450px, 90vw);
+    aspect-ratio: 1 / 1;
     border-radius: 1rem;
     overflow: hidden;
     transition: var(--transition);
@@ -359,19 +374,18 @@ body {
     .hero-grid {
         grid-template-columns: 1fr;
     }
-    
     .hero-title {
-        font-size: 3rem;
+        font-size: clamp(2rem, 6vw, 3rem);
     }
     
     .hero-subtitle {
-        font-size: 1.5rem;
+        font-size: clamp(1rem, 3.5vw, 1.5rem);
     }
 }
 
 @media (max-width: 640px) {
     .hero-title {
-        font-size: 2.5rem;
+        font-size: clamp(1.6rem, 7vw, 2.5rem);
     }
     
     .hero-buttons {
@@ -381,7 +395,7 @@ body {
 
 /* Section Styles */
 section {
-    padding: 5rem 0;
+    padding: 4rem 0;
 }
 
 .section-header {
@@ -437,10 +451,24 @@ section {
 
 .about-img {
     width: 100%;
-    height: 200px;
     object-fit: cover;
     border-radius: 1rem;
     transition: var(--transition);
+}
+
+.about-img-1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    height: 100%;
+    min-height: 200px;
+    max-height: 420px;
+}
+
+.about-img-2,
+.about-img-3 {
+    aspect-ratio: 4 / 3;
+    height: auto;
+    max-height: 200px;
 }
 
 .about-img:hover {
@@ -547,7 +575,7 @@ section {
 /* Projects Section */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 
@@ -650,6 +678,32 @@ section {
 @media (max-width: 640px) {
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Additional small-screen refinements */
+@media (max-width: 480px) {
+    #navigation {
+        padding: 0.6rem 0;
+    }
+
+    .hero-section {
+        padding-top: 6rem;
+    }
+
+    .section-title {
+        font-size: clamp(1.25rem, 5vw, 1.75rem);
+    }
+
+    .contact-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .marquee-forward .marquee-content,
+    .marquee-reverse .marquee-content {
+        animation-duration: 60s;
     }
 }
 
