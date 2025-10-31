@@ -675,6 +675,84 @@ section {
     font-weight: 600;
 }
 
+/* Project Modal */
+.project-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.project-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 700px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-card);
+    animation: fadeIn 0.3s ease;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.modal-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.modal-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+    justify-items: center;
+}
+
+.modal-images img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 0.75rem;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.modal-images img:hover {
+    transform: scale(1.05);
+}
+
+.modal-description p {
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 @media (max-width: 640px) {
     .projects-grid {
         grid-template-columns: 1fr;
