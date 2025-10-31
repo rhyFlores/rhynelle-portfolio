@@ -156,3 +156,69 @@ typeEffect();
 // Console message
 console.log('%c👋 Hello! Thanks for checking out my portfolio!', 'color: #a78bfa; font-size: 16px; font-weight: bold;');
 console.log('%cFeel free to reach out if you want to collaborate!', 'color: #06b6d4; font-size: 14px;');
+
+// Project Data
+const projects = {
+  ramils: {
+    title: "Ramil’s Creation Events Management System",
+    images: ["assets/Images/project1.png", "assets/Images/project1-2.png"],
+    description: `
+      <p><strong>Client:</strong> Event service provider in Ozamiz City (Capstone)</p>
+      <p><strong>Goal:</strong> Simplify bookings and client requests</p>
+      <p><strong>Solution:</strong> Web-based platform with scheduling, event requests, and automated confirmation and reminders.</p>
+      <p><strong>Impact:</strong> Faster booking, better communication, real-time admin updates</p>
+      <p><strong>Role:</strong> UI design (Figma) and front-end development (React + Tailwind CSS)</p>
+    `
+  },
+  valorant: {
+    title: "Valorant Website",
+    images: ["assets/Images/project2.png", "assets/Images/project2-2.png", "assets/Images/project2-3.png"],
+    description: `
+      <p><strong>Type:</strong> School project inspired by the game Valorant</p>
+      <p><strong>Features:</strong> Hero Parallax, Character info, skill videos, role categories using JSON data</p>
+      <p><strong>Impact:</strong> Interactive user experience with dynamic visuals</p>
+      <p><strong>Role:</strong> UI design and front-end development (layout/animation experiments)</p>
+    `
+  },
+  pos: {
+    title: "Booker POS System",
+    images: ["assets/Images/project3.png", "assets/Images/project3-2.png"],
+    description: `
+      <p><strong>Type:</strong> School project</p>
+      <p><strong>Purpose:</strong> Manage inventory, track sales, and generate receipts</p>
+      <p><strong>Impact:</strong> Reduced manual errors, simplify daily operations</p>
+      <p><strong>Role:</strong> Front-end design and development for usability</p>
+    `
+  }
+};
+
+// Modal Elements
+const modal = document.getElementById("projectModal");
+const modalTitle = modal.querySelector(".modal-title");
+const modalImages = modal.querySelector(".modal-images");
+const modalDesc = modal.querySelector(".modal-description");
+const closeBtn = modal.querySelector(".close-btn");
+
+// Open Modal
+document.querySelectorAll(".view-project").forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.preventDefault();
+    const projectKey = btn.dataset.project;
+    const project = projects[projectKey];
+
+    if (project) {
+      modalTitle.textContent = project.title;
+      modalImages.innerHTML = project.images
+        .map(src => `<img src="${src}" alt="${project.title}">`)
+        .join("");
+      modalDesc.innerHTML = project.description;
+      modal.classList.add("active");
+    }
+  });
+});
+
+// Close Modal
+closeBtn.addEventListener("click", () => modal.classList.remove("active"));
+window.addEventListener("click", e => {
+  if (e.target === modal) modal.classList.remove("active");
+});
