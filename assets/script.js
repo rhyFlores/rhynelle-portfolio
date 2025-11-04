@@ -128,7 +128,7 @@ projectCards.forEach(card => {
 
 // Typing effect
 const typingText = document.querySelector('.typing-text');
-const words = ['IT Student', 'Web Developer', 'Designer'];
+const words = ['IT Student', 'Web Developer', 'Web Designer'];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
