@@ -1,510 +1,484 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="assets/Images/favicon.png">
-    <title>Rhynelle Kate Flores | Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../assets/Images/favicon.png">
+<title>Rhynelle Kate Flores | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets\styles.css">
 </head>
-
 <body>
-    <!-- Navigation -->
-    <nav id="navigation">
-        <div class="container nav-container">
-            <div class="logo">
-                <span class="gradient-text">Rhynelle.</span>
-            </div>
 
-            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
 
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#achievements" class="nav-link">Achievements</a>
-                <a href="assets/Flores_Resume.pdf" class="btn btn-primary" download><i
-                        class="fas fa-download"></i>Resume</a>
-            </div>
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-logo"><span>//</span> rhynelle.dev</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+  </ul>
+  <div class="nav-right">
+    <!-- THEME TOGGLE -->
+    <button class="theme-toggle" id="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle theme">
+      <div class="theme-toggle-thumb" id="theme-thumb">🌙</div>
+    </button>
+    <span class="theme-toggle-label" id="theme-label">Dark</span>
+    <a href="https://mail.google.com/mail/?view=cm&to=rhynellekate22@gmail.com&su=Let's+Work+Together" class="nav-cta" target="_blank" rel="noopener noreferrer">Hire Me</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+  <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
+  <ul class="mobile-nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://mail.google.com/mail/?view=cm&to=rhynellekate22@gmail.com&su=Let's+Work+Together" class="mobile-cta" target="_blank" rel="noopener noreferrer">Hire Me ↗</a>
+</div>
+<div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+<!-- HERO -->
+<section id="hero">
+  <div id="hero-grid-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-text-col">
+      <p class="hero-tag">// frontend developer · ozamiz city, ph</p>
+      <h1 class="hero-name">
+        <span class="line"><span class="word">Rhynelle</span></span>
+        <span class="line"><span class="word">Kate</span></span>
+        <span class="line"><span class="word" style="color:var(--accent)">Flores.</span></span>
+      </h1>
+      <p class="hero-role">
+        Building <em>thoughtful</em> interfaces —<br>
+        crafted with intention, tested with care.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-ghost">Get In Touch ↗</a>
+      </div>
+      <div class="avail-badge" id="avail-badge">
+        <span class="avail-dot"></span>
+        available for work
+      </div>
+    </div>
+    <div class="hero-image-col">
+      <img src="../assets/Images/profile.jpg" alt="Rhynelle Kate Flores" loading="lazy">
+    </div>
+  </div>
+  <div class="hero-scroll-hint" id="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-label">01 / About</div>
+    <div class="about-grid">
+      <div>
+        <h2 class="about-h2">A developer who blends<br><span class="serif">code and creativity</span></h2>
+        <p class="about-body">I'm an IT graduate from La Salle University - Ozamiz with hands-on experience in web development and UI design, gained through a 3-month internship at <strong>ASV Business Solution</strong>. During my internship, I worked on the annotation system in <strong>Cirqapture</strong>, wiring it from Fabric.js canvas all the way to SVG rendering, PDF export, Angular migration, and a full collaborator and sharing system. I integrated live database data into a livestock monitoring dashboard for <strong>Farmyra</strong>. I helped draft the SRS and restructured <strong>NoDiy</strong> into a proper NX monorepo.</p>
+        <p class="about-body">I specialize in building clean, responsive, and user-friendly interfaces using JavaScript, Angular, React, and Tailwind CSS. I also have experience integrating frontend components with backend systems and working in a team using Git. I’m a fast learner who enjoys solving problems and adapting to new technologies. A <strong>philNITS</strong> certified, and currently looking for opportunities, gain experience in enterprise systems, and contribute to real-world solutions.</p>
+        <div class="stats-row reveal">
+          <div class="stat-cell"><span class="stat-num" data-count="3">0</span><span class="stat-lbl">Months Internship</span></div>
+          <div class="stat-cell"><span class="stat-num" data-count="6">0</span><span class="stat-lbl">Certifications</span></div>
+          <div class="stat-cell"><span class="stat-num" data-count="5">0</span><span class="stat-lbl">Projects Built</span></div>
         </div>
-    </nav>
+      </div>
+      <div class="about-img-stack">
+        <img class="img1" src="../assets/Images/about1.jpg" alt="Kate" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#1a2a1a,#0d190d)';this.removeAttribute('src')">
+        <img class="img2" src="../assets/Images/about3.jpg" alt="Kate joins Hack4Gov" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#1a2a1a,#0d190d)';this.removeAttribute('src')">
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content animate-fade-in-up">
-                    <span class="hero-intro">Hi, my name is</span>
-                    <h1 class="hero-title"><span class="gradient-text">Rhynelle Kate Flores</span></h1>
-                    <h2 class="hero-subtitle">I'm a/an <span class="typing-text gradient-textSecondary"></span></h2>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-gradient">
-                            View Projects
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg>
-                        </a>
-                        <a href="#contact" class="btn btn-outline">Contact Me</a>
-                    </div>
-                    <div class="hero-social-icons">
-                        <a href="https://github.com/rhyFlores" target="_blank" rel="noopener noreferrer"
-                            class="social-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path
-                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                </path>
-                            </svg>
-                        </a>
-                        <a href="https://www.facebook.com/rhynellekate.flores.9" target="_blank"
-                            rel="noopener noreferrer" class="social-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="hero-image-container animate-fade-in-up">
-                    <div class="hero-image-wrapper">
-                        <img src="assets/Images/profile.jpg" alt="Developer workspace" class="hero-image">
-                        <div class="hero-gradient-overlay"></div>
-                    </div>
-                    <div class="floating-blob blob-1"></div>
-                    <div class="floating-blob blob-2"></div>
-                </div>
-            </div>
+<!-- SKILLS -->
+<section id="skills">
+  <canvas id="skills-pattern-canvas"></canvas>
+  <div class="container">
+    <div class="section-label">02 / Skills</div>
+    <h2 class="skills-h2">Technologies I work with</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-title">Frontend</div>
+        <div class="pills">
+          <span class="pill">React</span><span class="pill">Angular</span><span class="pill">TypeScript</span>
+          <span class="pill">JavaScript</span><span class="pill">Tailwind CSS</span><span class="pill">HTML5</span>
+          <span class="pill">CSS3</span><span class="pill">Fabric.js</span><span class="pill">GSAP</span>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    About <span class="gradient-text">Me</span>
-                </h2>
-                <p class="section-subtitle">My journey and the things that keep me inspired</p>
-            </div>
-
-            <div class="about-grid">
-                <div class="about-content">
-                    <h3 class="about-heading gradient-text">My Story</h3>
-                    <p class="about-text">
-                        Hey there! I’m <span class="highlight">Rhynelle Kate</span>, but most people call me Kate. I’m
-                        currently pursuing my degree in <span class="highlight">Information Technology at La Salle
-                            University – Ozamiz</span>,
-                        and my curiosity for technology started with my love for games. That interest slowly grew into a
-                        passion for creating and designing websites that <span class="highlight">combine creativity and
-                            logic</span>.
-                        I’m still learning, exploring new skills, and discovering my place in the tech world, but my
-                        goal is to <span class="highlight">keep growing</span> while building <span
-                            class="highlight">meaningful and creative digital experiences</span>.
-                    </p>
-                    <p class="about-text">
-                        When I’m not studying or coding, I enjoy watching movies or anime, playing games, scrabble, or
-                        badminton, and exploring new design ideas or tutorials.
-                        I love brainstorming projects and finding fun ways to express my ideas — because for me, the
-                        best work comes from doing what you love,
-                        learning from every step, and being surrounded by people who inspire you.
-                    </p>
-                </div>
-
-                <div class="about-images">
-                    <div class="about-image-grid">
-                        <img src="assets/Images/about1.jpg" alt="About 1" class="about-img about-img-1">
-                        <img src="assets/Images/about3.jpg" alt="About 2" class="about-img about-img-2">
-                        <img src="assets/Images/about2.jpg" alt="About 3" class="about-img about-img-3">
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Backend & Database</div>
+        <div class="pills">
+          <span class="pill">NestJS</span><span class="pill">Laravel</span><span class="pill">PHP</span>
+          <span class="pill">MongoDB</span><span class="pill">MySQL</span><span class="pill">REST APIs</span>
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    My <span class="gradient-text">Skills</span>
-                </h2>
-                <p class="section-subtitle">Technologies and tools I work with</p>
-            </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Tools & Design</div>
+        <div class="pills">
+          <span class="pill">Git</span><span class="pill">GitHub Actions</span><span class="pill">AWS S3</span>
+          <span class="pill">Figma</span><span class="pill">Canva</span><span class="pill">Power BI</span>
+          <span class="pill">Tableau</span><span class="pill">Python</span><span class="pill">NumPy</span><span class="pill">Pandas</span>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="marquee-container">
-            <div class="marquee marquee-forward">
-                <div class="marquee-content" id="marquee-forward">
-                </div>
+<!-- PROJECTS — stacked card scroll (Valentin Gassend style) -->
+<section id="projects">
+  <div class="projects-intro">
+    <div>
+      <div class="section-label pl">03 / Projects</div>
+      <h2 class="projects-h2">Selected Work</h2>
+    </div>
+    <a href="https://github.com/rhyFlores" target="_blank" class="view-all-link">All projects ↗</a>
+  </div>
+
+  <!-- Stack wrapper: height is set by JS based on card count -->
+  <div class="proj-stack-scroller" id="proj-stack">
+
+    <!-- Card 1: Ramil's Creation — forest green -->
+    <div class="proj-card-sticky" style="z-index:51">
+      <div class="proj-card" style="background:#1a3a2a">
+        <div class="proj-card-overlay"></div>
+        <span class="proj-card-index">01 / 04</span>
+        <div class="proj-card-content">
+          <div class="proj-meta">
+            <span class="proj-num">// 01 — Featured</span>
+            <h3 class="proj-title">Ramil's Creation EMS</h3>
+            <p class="proj-blurb">Events management web app — I led all frontend work using React and Tailwind CSS, with Laravel powering the backend API. Built as capstone with a 3-person team.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">React</span><span class="proj-tag">Laravel</span><span class="proj-tag">TypeScript</span>
+              <span class="proj-tag">Tailwind CSS</span><span class="proj-tag">MySQL</span><span class="proj-tag">PHP</span>
             </div>
-        </div>
-
-        <div class="marquee-container">
-            <div class="marquee marquee-reverse">
-                <div class="marquee-content" id="marquee-reverse">
-                </div>
+            <div class="proj-links-row">
+              <a href="https://github.com/rhyFlores/Ramil-s-Creation-EMS" target="_blank" class="proj-link primary">GitHub ↗</a>
+              <a href="#" class="proj-link" id="view-video-btn">View Video ↗</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    Featured <span class="gradient-text">Projects</span>
-                </h2>
-                <p class="section-subtitle">Some of my recent work</p>
+          </div>
+          <div class="proj-img-frame">
+            <div class="proj-img-inner proj-slideshow">
+              <div class="ss-track">
+                <img src="../assets/Images/project1.jpg"   alt="Ramil's Creation EMS — view 1" loading="lazy">
+                <img src="../assets/Images/project1-2.jpg" alt="Ramil's Creation EMS — view 2" loading="lazy">
+              </div>
+              <button class="ss-btn ss-prev" aria-label="Previous slide">&#8249;</button>
+              <button class="ss-btn ss-next" aria-label="Next slide">&#8250;</button>
+              <div class="ss-dots">
+                <span class="ss-dot active"></span>
+                <span class="ss-dot"></span>
+              </div>
+              <div class="proj-img-num">01</div>
             </div>
-
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image-wrapper">
-                        <img src="assets/Images/project1.png" alt="Ramil's Creation" class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link view-project" data-project="ramils"
-                                    aria-label="View Project">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </a>
-                                <a href="https://github.com/rhyFlores/Ramil-s-Creation-EMS" target="_blank"
-                                    class="project-link" aria-label="View GitHub">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2">
-                                        <path
-                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                        </path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Ramil’s Creation Events Management System</h3>
-                        <p class="project-description">
-                            A modular web system design for handling event bookings, client communication, and
-                            scheduling.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Laravel</span>
-                            <span class="tag">Tailwind</span>
-                            <span class="tag">PHP</span>
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">MySQL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-wrapper">
-                        <img src="assets/Images/project2.png" alt="Valorant Website" class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link view-project" data-project="valorant"
-                                    aria-label="View Project">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </a>
-                                <a href="https://rycat.lsu-ccsea.cloud/" class="project-link" aria-label="View live demo">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Valorant Website</h3>
-                        <p class="project-description">
-                            An interactive fan website featuring game information, agent details, and community features
-                            with modern design.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">JSON</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-wrapper">
-                        <img src="assets/Images/project3.png" alt="Booker POS" class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link view-project" data-project="pos"
-                                    aria-label="View Project">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </a>
-                                <a href="https://github.com/rhyFlores/POS_Project" target="_blank" class="project-link"
-                                    aria-label="View GitHub">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2">
-                                        <path
-                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                        </path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Booker POS System</h3>
-                        <p class="project-description">
-                            Point of Sale system for retail management with inventory tracking and sales processing.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">PHP</span>
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
-
-    <!-- Project Modal -->
-    <div class="project-modal" id="projectModal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2 class="modal-title"></h2>
-            <div class="modal-images"></div>
-            <div class="modal-description"></div>
-        </div>
+      </div>
     </div>
 
-    <!-- Achievements Section -->
-    <section id="achievements" class="achievements-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    Achievements & <span class="gradient-text">Certificates</span>
-                </h2>
-                <p class="section-subtitle">Recognition and milestones</p>
+    <!-- Card 2: Valorant Fan Site — deep burgundy -->
+    <div class="proj-card-sticky" style="z-index:52">
+      <div class="proj-card" style="background:#3a1a20">
+        <div class="proj-card-overlay"></div>
+        <span class="proj-card-index">02 / 04</span>
+        <div class="proj-card-content">
+          <div class="proj-meta">
+            <span class="proj-num">// 02</span>
+            <h3 class="proj-title">Valorant Fan Website</h3>
+            <p class="proj-blurb">Interactive fan site featuring agent profiles and game data. Built with vanilla HTML, CSS, and JS — strong early example of UI composition and JSON data handling.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">HTML</span><span class="proj-tag">CSS</span><span class="proj-tag">JavaScript</span><span class="proj-tag">JSON</span>
             </div>
-
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M8 21h8"></path>
-                            <path d="M12 17v4"></path>
-                            <path d="M7 4h10v7a5 5 0 0 1-10 0V4z"></path>
-                            <path d="M4 4h3v4a4 4 0 0 1-4-4z"></path>
-                            <path d="M20 4h-3v4a4 4 0 0 0 4-4z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="achievement-title">HackForGov 2024 CTF – Top 6</h3>
-                    <p class="achievement-description">
-                        Secured Top 6 in the DICT Region 10 Cybersecurity Capture the Flag Competition held in Iligan
-                        City, showcasing problem-solving and cybersecurity skills.
-                    </p>
-                    <span class="achievement-date">April 2024</span>
-                </div>
-
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <rect x="9" y="2" width="6" height="4" rx="1" ry="1"></rect>
-                            <path d="M9 2H5a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-4"></path>
-                        </svg>
-                    </div>
-                    <h3 class="achievement-title">ICT Project Management</h3>
-                    <p class="achievement-description">
-                        Learned the fundamentals of planning and managing ICT projects, focusing on teamwork,
-                        organization, and effective project execution.
-                    </p>
-                    <span class="achievement-date">April 2025</span>
-                </div>
-
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <line x1="12" y1="20" x2="12" y2="10"></line>
-                            <line x1="18" y1="20" x2="18" y2="4"></line>
-                            <line x1="6" y1="20" x2="6" y2="14"></line>
-                        </svg>
-                    </div>
-                    <h3 class="achievement-title">Data Analytics using Power BI Workshop</h3>
-                    <p class="achievement-description">
-                        Participated in a hands-on workshop with Mr. Bonnie Jefferson Padilla, learning how to visualize
-                        and interpret data using Power BI.
-                    </p>
-                    <span class="achievement-date">May 2025</span>
-                </div>
-
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <circle cx="6" cy="6" r="3"></circle>
-                            <circle cx="6" cy="18" r="3"></circle>
-                            <path d="M6 9v6a9 9 0 0 0 9 9h3"></path>
-                        </svg>
-                    </div>
-                    <h3 class="achievement-title">Git Version Control Hybrid Webinar</h3>
-                    <p class="achievement-description">
-                        Attended a technical webinar led by Mr. Zyndly Kent Baja focusing on Git fundamentals,
-                        branching, and collaborative workflows.
-                    </p>
-                    <span class="achievement-date">September 2025</span>
-                </div>
-
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M12 19l7-7-7-7-7 7 7 7z"></path>
-                            <line x1="12" y1="12" x2="12" y2="19"></line>
-                        </svg>
-                    </div>
-                    <h3 class="achievement-title">UI/UX Design Webinar</h3>
-                    <p class="achievement-description">
-                        Joined a creative design session with Ms. Lucy Mae Tan on principles of UI/UX, usability
-                        testing, and creating user-centered interfaces.
-                    </p>
-                    <span class="achievement-date">September 2025</span>
-                </div>
-
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M20 17.58A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 4 16.25"></path>
-                            <path d="M16 16h1a3 3 0 0 1 0 6H6a4 4 0 0 1 0-8h1"></path>
-                        </svg>
-                    </div>
-                    <h3 class="achievement-title">AWS Hybrid Webinar</h3>
-                    <p class="achievement-description">
-                        Participated in a cloud technology webinar with Ms. Darla David, focusing on AWS services and
-                        their applications in scalable web systems.
-                    </p>
-                    <span class="achievement-date">October 2025</span>
-                </div>
+            <div class="proj-links-row">
+              <a href="https://github.com/rhyFlores/valorant" target="_blank" class="proj-link primary">GitHub ↗</a>
+              <a href="https://rhyflores.github.io/valorant/" target="_blank" class="proj-link">Live Website ↗</a>
             </div>
+          </div>
+          <div class="proj-img-frame">
+            <div class="proj-img-inner proj-slideshow">
+              <div class="ss-track">
+                <img src="../assets/Images/project2.jpg"   alt="Valorant Fan Website — view 1" loading="lazy">
+                <img src="../assets/Images/project2-2.jpg" alt="Valorant Fan Website — view 2" loading="lazy">
+                <img src="../assets/Images/project2-3.jpg" alt="Valorant Fan Website — view 3" loading="lazy">
+              </div>
+              <button class="ss-btn ss-prev" aria-label="Previous slide">&#8249;</button>
+              <button class="ss-btn ss-next" aria-label="Next slide">&#8250;</button>
+              <div class="ss-dots">
+                <span class="ss-dot active"></span>
+                <span class="ss-dot"></span>
+                <span class="ss-dot"></span>
+              </div>
+              <div class="proj-img-num">02</div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
 
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    Get In <span class="gradient-text">Touch</span>
-                </h2>
-                <p class="section-subtitle">Let's create something amazing together</p>
+    <!-- Card 3: Booker POS — deep navy -->
+    <div class="proj-card-sticky" style="z-index:53">
+      <div class="proj-card" style="background:#12203a">
+        <div class="proj-card-overlay"></div>
+        <span class="proj-card-index">03 / 04</span>
+        <div class="proj-card-content">
+          <div class="proj-meta">
+            <span class="proj-num">// 03</span>
+            <h3 class="proj-title">Booker POS System</h3>
+            <p class="proj-blurb">Point of Sale system with inventory tracking and sales processing. Demonstrates full-stack fundamentals with PHP, HTML, CSS, and JavaScript.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">PHP</span><span class="proj-tag">HTML</span><span class="proj-tag">CSS</span><span class="proj-tag">JavaScript</span>
             </div>
-
-            <div class="contact-content">
-                <p class="contact-text">
-                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
-                    vision.
-                    Feel free to reach out through any of the platforms below.
-                </p>
-
-                <div class="contact-links">
-                    <a href="mailto:rhynellekate.flores@lsu.edu.ph" class="contact-link-card">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                            </path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        <span>Email</span>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/rhynelle-kate-flores-5b20a32b4/" target="_blank"
-                        rel="noopener noreferrer" class="contact-link-card">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                            </path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                        <span>LinkedIn</span>
-                    </a>
-
-                    <a href="https://github.com/rhyFlores" target="_blank" rel="noopener noreferrer"
-                        class="contact-link-card">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path
-                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                            </path>
-                        </svg>
-                        <span>GitHub</span>
-                    </a>
-
-                    <a href="https://www.facebook.com/rhynellekate.flores.9" target="_blank" rel="noopener noreferrer"
-                        class="contact-link-card">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                        </svg>
-                        <span>Facebook</span>
-                    </a>
-                </div>
-
-                <div class="contact-cta">
-                    <a href="mailto:rhynellekate.flores@lsu.edu.ph" class="btn btn-gradient-large">
-                        Send Me a Message
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
-                </div>
+            <div class="proj-links-row">
+              <a href="https://github.com/rhyFlores/POS_Project" target="_blank" class="proj-link primary">GitHub ↗</a>
             </div>
+          </div>
+          <div class="proj-img-frame">
+            <div class="proj-img-inner proj-slideshow">
+              <div class="ss-track">
+                <img src="../assets/Images/project3.jpg"   alt="Booker POS System — view 1" loading="lazy">
+                <img src="../assets/Images/project3-2.jpg" alt="Booker POS System — view 2" loading="lazy">
+              </div>
+              <button class="ss-btn ss-prev" aria-label="Previous slide">&#8249;</button>
+              <button class="ss-btn ss-next" aria-label="Next slide">&#8250;</button>
+              <div class="ss-dots">
+                <span class="ss-dot active"></span>
+                <span class="ss-dot"></span>
+              </div>
+              <div class="proj-img-num">03</div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Rhynelle Kate Flores. All rights reserved.</p>
+    <!-- Card 4: Cirqapture — internship work -->
+    <div class="proj-card-sticky" style="z-index:55">
+      <div class="proj-card" style="background:#16212a">
+        <div class="proj-card-overlay"></div>
+        <span class="proj-card-index">04 / 05</span>
+        <div class="proj-card-content">
+          <div class="proj-meta">
+            <span class="proj-num">// 04</span>
+            <h3 class="proj-title">Cirqapture Annotation System</h3>
+            <p class="proj-blurb">A Chrome extension that has interactive annotation features built during my internship. I worked on Fabric.js canvas integration, SVG export, PDF generation, and a collaborator sharing workflow.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">Fabric.js</span><span class="proj-tag">Angular</span><span class="proj-tag">SVG</span>
+              <span class="proj-tag">PDF Export</span><span class="proj-tag">Collaboration</span>
+            </div>
+          </div>
+          <div class="proj-img-frame">
+            <div class="proj-img-inner proj-slideshow">
+              <div class="ss-track">
+                <img src="../assets/Images/cirq1.png" alt="Cirqapture screenshot 1" loading="lazy">
+                <img src="../assets/Images/cirq2.png" alt="Cirqapture screenshot 2" loading="lazy">
+                <img src="../assets/Images/cirq3.png" alt="Cirqapture screenshot 3" loading="lazy">
+                <img src="../assets/Images/cirq4.png" alt="Cirqapture screenshot 4" loading="lazy">
+                <img src="../assets/Images/cirq5.png" alt="Cirqapture screenshot 5" loading="lazy">
+                <img src="../assets/Images/cirq6.png" alt="Cirqapture screenshot 6" loading="lazy">
+              </div>
+              <button class="ss-btn ss-prev" aria-label="Previous slide">&#8249;</button>
+              <button class="ss-btn ss-next" aria-label="Next slide">&#8250;</button>
+              <div class="ss-dots">
+                <span class="ss-dot active"></span>
+                <span class="ss-dot"></span>
+                <span class="ss-dot"></span>
+                <span class="ss-dot"></span>
+                <span class="ss-dot"></span>
+                <span class="ss-dot"></span>
+              </div>
+              <div class="proj-img-num">04</div>
+            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
 
-    <script src="assets/script.js"></script>
+    <!-- Card 5: Katha Studio Website — live site -->
+    <div class="proj-card-sticky" style="z-index:56">
+      <div class="proj-card" style="background:#2a1f2f">
+        <div class="proj-card-overlay"></div>
+        <span class="proj-card-index">05 / 05</span>
+        <div class="proj-card-content">
+          <div class="proj-meta">
+            <span class="proj-num">// 05</span>
+            <h3 class="proj-title">Katha Studio Website</h3>
+            <p class="proj-blurb">A clean, responsive studio landing page designed and built for Katha Studio. Delivered as a polished website with strong visual hierarchy and modern web interactions.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">HTML</span><span class="proj-tag">CSS</span><span class="proj-tag">JavaScript</span>
+              <span class="proj-tag">Responsive</span><span class="proj-tag">Netlify</span>
+            </div>
+            <div class="proj-links-row">
+              <a href="https://kathastudios.netlify.app/" target="_blank" class="proj-link primary">Live Website ↗</a>
+            </div>
+          </div>
+          <div class="proj-img-frame">
+            <div class="proj-img-inner proj-slideshow">
+              <div class="ss-track">
+                <img src="../assets/Images/katha1.png" alt="Katha Studio website preview" loading="lazy">
+                <img src="../assets/Images/katha2-2.png" alt="Katha Studio website preview" loading="lazy">
+                <img src="../assets/Images/katha3-2.png" alt="Katha Studio website preview" loading="lazy">
+                <img src="../assets/Images/katha4-2.png" alt="Katha Studio website preview" loading="lazy">
+                <img src="../assets/Images/katha5-2.png" alt="Katha Studio website preview" loading="lazy">
+              </div>
+              <button class="ss-btn ss-prev" aria-label="Previous slide">&#8249;</button>
+              <button class="ss-btn ss-next" aria-label="Next slide">&#8250;</button>
+              <div class="ss-dots">
+                <span class="ss-dot active"></span>
+                <span class="ss-dot"></span>
+                <span class="ss-dot"></span>
+                <span class="ss-dot"></span>
+                <span class="ss-dot"></span>
+              </div>
+              <div class="proj-img-num">05</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /proj-stack-scroller -->
+
+  <div class="proj-stack-footer">
+    <a href="https://github.com/rhyFlores" target="_blank">View all projects on GitHub ↗</a>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label">04 / Experience</div>
+    <h2 class="exp-h2">Where I've worked</h2>
+    <div class="timeline" id="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-period">Feb 2026 - May 2026</p>
+        <h3 class="timeline-role">Web Developer Intern</h3>
+        <p class="timeline-company">ASV Business Solution · Mandaue City, Cebu</p>
+        <ul class="timeline-bullets">
+          <li>Contributed to <strong>Cirqapture</strong>, a screen-capture and workflow documentation platform</li>
+          <li>Built interactive canvas features using <strong>Fabric.js</strong> for annotation and markup</li>
+          <li>Developed frontend components with <strong>React, Angular, and TypeScript</strong>, with Tailwind CSS</li>
+          <li>Set up <strong>GitHub Actions CI/CD pipelines</strong> for automated build and deployment</li>
+          <li>PDF generation features using <strong>pdf-lib</strong> and <strong>html2canvas</strong></li>
+        </ul>
+        <div class="timeline-tech">
+          <span class="tech-tag">React</span><span class="tech-tag">Angular</span><span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Fabric.js</span><span class="tech-tag">Tailwind CSS</span>
+          <span class="tech-tag">GitHub Actions</span><span class="tech-tag">AWS S3</span><span class="tech-tag">pdf-lib</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-period">Aug 2024 — May 2025</p>
+        <h3 class="timeline-role">Frontend Developer (Capstone)</h3>
+        <p class="timeline-company">La Salle University – Ozamiz · Academic Project</p>
+        <ul class="timeline-bullets">
+          <li>Led all frontend development on <strong>Ramil's Creation EMS</strong>, a full-stack events management app</li>
+          <li>Responsive UI using <strong>React and Tailwind CSS</strong> for event bookings, client records, and scheduling</li>
+          <li>Integrated with <strong>Laravel REST API</strong> and MySQL in a 3-person team</li>
+        </ul>
+        <div class="timeline-tech">
+          <span class="tech-tag">React</span><span class="tech-tag">Laravel</span><span class="tech-tag">PHP</span>
+          <span class="tech-tag">MySQL</span><span class="tech-tag">TypeScript</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="container">
+    <div class="section-label">05 / Achievements</div>
+    <h2 class="achievements-h2">Certifications & Recognition</h2>
+    <div class="achievements-grid">
+      <div class="achievement-card featured"><p class="ach-date">October 2025</p><h3 class="ach-title">PhilNITS IP Exam Passer</h3><p class="ach-desc">Internationally recognized IT certification demonstrating competence in core IT concepts, systems, networks, databases, and information security.</p><span class="ach-badge">Certification</span></div>
+      <div class="achievement-card"><p class="ach-date">August 2024 & November 2025</p><h3 class="ach-title">HackForGov 2024-2025 CTF — Top 6 & Top 5</h3><p class="ach-desc">DICT Region 10 Capture-The-Flag Competition, Iligan City & Cagayan de Oro City. Top 6 and 5 finish.</p><span class="ach-badge">Competition</span></div>
+      <div class="achievement-card"><p class="ach-date">September 2025</p><h3 class="ach-title">UI/UX Design Webinar</h3><p class="ach-desc">Usability testing and user-centered design with Ms. Lucy Mae Tan.</p><span class="ach-badge">Training</span></div>
+      <div class="achievement-card"><p class="ach-date">September 2025</p><h3 class="ach-title">Git Version Control Webinar</h3><p class="ach-desc">Branching and collaborative workflows with Mr. Zyndly Kent Baja.</p><span class="ach-badge">Training</span></div>
+      <div class="achievement-card"><p class="ach-date">October 2025</p><h3 class="ach-title">AWS Cloud Hybrid Webinar</h3><p class="ach-desc">AWS services and scalable web architecture with Ms. Darla David.</p><span class="ach-badge">Training</span></div>
+      <div class="achievement-card"><p class="ach-date">May 2025</p><h3 class="ach-title">Data Analytics — Power BI</h3><p class="ach-desc">Data visualization with Mr. Bonnie Jefferson Padilla.</p><span class="ach-badge">Training</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <canvas id="contact-lines-bg"></canvas>
+  <div class="container">
+    <div class="section-label">06 / Contact</div>
+    <div class="contact-inner">
+      <h2 class="contact-h2">Let's build<br><span class="serif">something great</span><br>together.</h2>
+      <p class="contact-body">I'm actively looking for frontend developer roles. If you have a project, a team, or just want to connect — my inbox is open.</p>
+      <div class="contact-grid">
+        <a href="https://mail.google.com/mail/?view=cm&to=rhynellekate22@gmail.com&su=Let's+Work+Together" class="contact-link-item" target="_blank" rel="noopener noreferrer">
+          <div class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></div>
+          <span class="cl-label">rhynellekate22@gmail.com</span><span class="cl-arrow">↗</span>
+        </a>
+        <a href="https://github.com/rhyFlores" target="_blank" class="contact-link-item">
+          <div class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div>
+          <span class="cl-label">github.com/rhyFlores</span><span class="cl-arrow">↗</span>
+        </a>
+        <a href="https://www.linkedin.com/in/rhynelle-kate-flores-5b20a32b4/" target="_blank" class="contact-link-item">
+          <div class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+          <span class="cl-label">linkedin.com/in/rhynelle-kate-flores</span><span class="cl-arrow">↗</span>
+        </a>
+        <a href="assets/RhynelleFlores_Resume.pdf" target="_blank" class="contact-link-item">
+          <div class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <span class="cl-label">Download Resume</span><span class="cl-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="footer-copy">© <span id="footer-year"></span> Rhynelle Kate Flores — All rights reserved</p>
+  <p class="footer-built">Built with <span>l o v e</span></p>
+</footer>
+
+<div class="video-overlay" id="video-overlay" aria-hidden="true">
+  <div class="video-modal" role="dialog" aria-modal="true" aria-labelledby="video-title">
+    <div class="video-header">
+      <div class="video-title" id="video-title">Ramil's Creation EMS video</div>
+      <button class="video-close" id="close-video-btn" aria-label="Close video">✕</button>
+    </div>
+    <video id="project-video" controls playsinline>
+      <source src="../assets/Images/project1-vid.mp4" type="video/mp4">
+      Your browser does not support the video element.
+    </video>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+<script>
+  // Auto-update footer year
+  (function () {
+    const el = document.getElementById('footer-year');
+    if (el) el.textContent = String(new Date().getFullYear());
+  })();
+</script>
+<script src="assets\script.js"></script>
 </body>
-
 </html>
